@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+      <title>Dine-media</title>
+    </meta>
+    <%= stylesheet_link_tag    "all","global", :media => "all" %>
+    <%= javascript_include_tag "application", "https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js", "http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js","http://code.jquery.com/jquery-1.7.1.min.js","slides.min.jquery.js" %>
+    <%= csrf_meta_tags %>
+    <script>
+      $(function(){
+        $('#slides').slides({
+          preload: true,
+          preloadImage: '/assets/img/loading.gif',
+          play: 5000,
+          pause: 2500,
+          hoverPause: true
+        });
+      });
+    </script>
+  </head>
+  <body class="home">
+    <!-- wrapper -->
+    <div id="wrapper">
+      <div class="w1">
+        <!-- header -->
+        <header id="header">
+          <div class="header-holder">
+            <!-- bar -->
+            <div class="bar">
+              <!-- logo -->
+              <h1 class="logo vcard"><a href="home.html" class="fn org url">MyDateIsHere</a></h1>
+              <!-- social networks -->
+              <ul class="social-networks">
+                <li><%=  params[:action] == 'index' ? (link_to image_tag("/assets/homeorange.png"), '/') : (link_to image_tag("/assets/homeblack.png"), '/', :class=>"home1")  %></li>
+                <li><%=  params[:action] == 'portfolio' ? (link_to image_tag("/assets/homeorange.png"), '/portfolio') : (link_to image_tag("/assets/portfolioblack.png"), '/portfolio', :class=>"portfolio")  %></li>
+                <li><%=  params[:action] == 'contact' ? (link_to image_tag("/assets/homeorange.png"), '/contact') : (link_to image_tag("/assets/contactblack.png"), '/contact', :class=>"contact")  %></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <!-- main -->
+        <section id="sub_main">
+          <div class="sub_main-holder">
+            <!-- sub navigation -->
+            <nav class="sub-nav">
+              <ul class="sub-nav-buttons">
+                <li><%=  params[:action] == 'design_and_development' ? (link_to image_tag("/assets/design and development page/d&d-page_03.png"), '/design_and_development', :class=>"development-hover") : (link_to image_tag("/assets/designanddevelopment tab.png"), '/design_and_development', :class=>"development")  %></li>
+                <li><%=  params[:action] == 'cloud_services' ? (link_to image_tag("/assets/cloud page/cloud-page_03.png"), '/cloud_services', :class=>"cloudservices-hover") : (link_to image_tag("/assets/cloudservices.png"), '/cloud_services', :class=>"cloudservices")  %></li>
+                <li><%=  params[:action] == 'consultancy_services' ? (link_to image_tag("/assets/consultancy-page_04.png"), '/consultancy_services', :class=>"consult-hover") : (link_to image_tag("/assets/consultancyservices.png"), '/consultancy_services', :class=>"consult")  %></li>
+                <li><%=  params[:action] == 'mobile_appications' ? (link_to image_tag("/assets/mobile-page_03.png"), '/mobile_appications', :class=>"mobile-hover") : (link_to image_tag("/assets/mobileservices.png"), '/mobile_appications', :class=>"mobile")  %></li>
+              </ul>
+            </nav>
+          </div>
+        </section>
+        <!-- main -->
+        <section id=<%= params[:action] == 'index' ? "main" : "content-main" %>>
+          <div class="main-holder">
+            <!-- sub navigation -->
+            <%= yield %>
+          </div>
+        </section>
+        <% if params[:action] == 'index' %>
+          <div id="ads">
+            <div class="ad_main-holder">
+              <marquee>  <ul class="footer-logos">
+                  <li><img src="/assets/tech/javascript_logo.gif" /></li>
+                  <li><img src="/assets/tech/RC_Services_03-11.jpg" /></li>
+                  <li><img src="/assets/tech/RC_Services_03-02.jpg" /></li>
+                  <li><img src="/assets/tech/RC_Services_03-04.jpg" /></li>
+                  <li><img src="/assets/tech/RC_Services_03-06.jpg" /></li>
+                  <li><img src="/assets/tech/RC_Services_03-07.jpg" /></li>
+                  <li><img src="/assets/tech/RC_Services_03-13.jpg" /></li>
+                  <li><img src="/assets/tech/RC_Services_03-14.jpg" /></li>
+                  <li><img src="/assets/tech/RC_Services_03-0211.jpg" /></li>
+                  <li><img src="/assets/tech/RC_Services_03-0611.jpg" /></li>
+                  <li><img src="/assets/tech/RC_Services_03-0811.jpg" /></li>
+                  <li><img src="/assets/tech/RC_Services_03-0911.jpg" /></li>
+                </ul></marquee>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <!-- footer -->
+      <footer id="footer">
+        <div class="footer-holder">
+          <div class="footer-frame">
+            <div class="col-1">
+              <p>@ Copyright Dine-Media All Rights Reserved.</p>
+            </div>
+            <div class="col-2">
+              <ul class="footer-links">
+                <li><a href="#"> Home </a></li>
+                <li>|</li>
+                <li><a href="#"> Portfolio </a></li>
+                <li>|</li>
+                <li><a href="#"> Services </a></li>
+                <li>|</li>
+                <li><a href="#"> Contact Us </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript">
+      //Tabs in Service page
+      $(".dashboardtabs").find("li:first").addClass("active");
+      $(".dashboardpanes").find(".tabs:first").show();
+      $(document).on( "click", ".dashboardtabs > li > div > a", function( e ) {
+        // $(".dashboardtabs > li > div > a").click(function( e ) {
+        $(".dashboardtabs > li").removeClass("active");
+        $(this).parent('div').parent().addClass("active");
+        var idpass = $(this).attr("rel");
+        $(".dashboardpanes").find(".tabs").hide();
+        $(".dashboardpanes").find("#" + idpass ).fadeIn("slow");
+        //alert(idpass);
+      });
+      //Tabs in Service page
+      $(".dashboardtabs1").find("li:first").addClass("active");
+      $(".dashboardpanes1").find(".tabs:first").show();
+      $(document).on( "click", ".dashboardtabs1 > li > div > a", function( e ) {
+        // $(".dashboardtabs1 > li > div > a").click(function( e ) {
+        $(".dashboardtabs1 > li").removeClass("active");
+        $(this).parent('div').parent().addClass("active");
+        var idpass = $(this).attr("rel");
+        $(".dashboardpanes1").find(".tabs").hide();
+        $(".dashboardpanes1").find("#" + idpass ).fadeIn("slow");
+        //alert(idpass);
+      });
+    </script>
+  </body>
+</html>

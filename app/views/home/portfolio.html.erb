@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+      <title>Portfolio</title>
+    </meta>
+    <%= stylesheet_link_tag "all","global", "jcarousel" ,"uscrollbar", "/assets/fancybox/jquery.fancybox-1.3.1.css", :media => "all" %>
+    <%= javascript_include_tag "application", "fancybox/jquery-1.4.2.min.js","fancybox/jquery.mousewheel-3.0.2.pack.js", "fancybox/jquery.fancybox-1.3.1.js", "jquery.jcarousel.pack.js", "jquery.uscrollbar.js" %>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.sample').uscrollbar();
+      });
+    </script>
+  </head>
+  <body class="home">
+    <!-- wrapper -->
+    <div id="wrapper">
+      <div class="w1">
+        <div id="portfolia_body">
+          <!-- header -->
+          <header id="header">
+            <div class="portfolia_header-holder">
+              <!-- bar -->
+              <div class="bar">
+                <!-- logo -->
+                <h1 class="logo vcard"><a href="home.html" class="fn org url"></a></h1>
+                <!-- social networks -->
+                <ul class="social-networks">
+                  <li><%=  link_to image_tag("/assets/homeblack.png"), '/', :class=>"home1" %></li>
+                  <li><%=  link_to image_tag("/assets/homeorange.png"), '/portfolio' %></li>
+                  <li><%=  link_to image_tag("/assets/contactblack.png"), '/contact', :class=>"contact"  %></li>
+                </ul>
+              </div>
+            </div>
+          </header>
+          <div class="main-holder" style="width: 969px;">
+            <div id="portfolia_screen">
+              <ul>
+                <li class="p1 active">
+                  <div id="left-screen"><a href="/assets/screens/smartquotez.png" class="portfolio_IMageLink"> <img src="/assets/screens/smartquotez.png"  width="433" height="325"/></a>
+                  </div>
+                  <div id="right-screen">
+                    <h2>Smart Quotez</h2>
+                    <div class="sample">
+                      <h4>Project Description:</h4> <p>Ehaeath pro is a SAAS based helthcare application which is mainly used by hospitals, clinics and individual practitioners around the globe. Ehealth Pro Clinic is the clinic module of this SAAS application. The product is carefully thought and automated based on process and compliances used within the clinic for efficient execution of tasks and patient/employee/hospital management. There are multiple plans to choose from basic to advanced level of operations.</p>
+                      <h4>Features:</h4>
+                      <ul>
+                        <li> <span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                      </ul>
+
+                      <h4>Technologies used:</h4> <p> Ruby on Rails, JS/Jquery/AJAX, My SQL </p>
+                      <h4>Deployment:</h4>   <p>This is deployed on high availability and secured cloud servers and technologically advanced than its competitors in market. </p>
+                      <h4>Duration of the project:</h4><p> 8 months</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="p2">
+                  <div id="left-screen"><a href="/assets/screens/mdih.png" class="portfolio_IMageLink"> <img src="/assets/screens/mdih.png"  width="433" height="325"/></a>
+                  </div>
+                  <div id="right-screen">
+                    <h2>My Date is here</h2>
+                    <div class="sample">
+                      <h4>Project Description:</h4> <p>Ehaeath pro is a SAAS based helthcare application which is mainly used by hospitals, clinics and individual practitioners around the globe. Ehealth Pro Clinic is the clinic module of this SAAS application. The product is carefully thought and automated based on process and compliances used within the clinic for efficient execution of tasks and patient/employee/hospital management. There are multiple plans to choose from basic to advanced level of operations.</p>
+                      <h4>Features:</h4>
+                      <ul>
+                        <li> <span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                      </ul>
+
+                      <h4>Technologies used:</h4> <p> Ruby on Rails, JS/Jquery/AJAX, My SQL </p>
+                      <h4>Deployment:</h4>   <p>This is deployed on high availability and secured cloud servers and technologically advanced than its competitors in market. </p>
+                      <h4>Duration of the project:</h4><p> 8 months</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="p3">
+                  <div id="left-screen"><a href="/assets/screens/mdih2.png" class="portfolio_IMageLink"> <img src="/assets/screens/mdih2.png"  width="433" height="325"/></a>
+                  </div>
+                  <div id="right-screen">
+                    <h2>MDIH</h2>
+                    <div class="sample">
+                      <h4>Project Description:</h4> <p>Ehaeath pro is a SAAS based helthcare application which is mainly used by hospitals, clinics and individual practitioners around the globe. Ehealth Pro Clinic is the clinic module of this SAAS application. The product is carefully thought and automated based on process and compliances used within the clinic for efficient execution of tasks and patient/employee/hospital management. There are multiple plans to choose from basic to advanced level of operations.</p>
+                      <h4>Features:</h4>
+                      <ul>
+                        <li> <span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                      </ul>
+
+                      <h4>Technologies used:</h4> <p> Ruby on Rails, JS/Jquery/AJAX, My SQL </p>
+                      <h4>Deployment:</h4>   <p>This is deployed on high availability and secured cloud servers and technologically advanced than its competitors in market. </p>
+                      <h4>Duration of the project:</h4><p> 8 months</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="p4">
+                  <div id="left-screen"><a href="/assets/screens/timeraven1.png" class="portfolio_IMageLink"> <img src="/assets/screens/timeraven1.png"  width="433" height="325"/></a>
+                  </div>
+                  <div id="right-screen">
+                    <h2>Timeraven</h2>
+                    <div class="sample">
+                      <h4>Project Description:</h4> <p>Ehaeath pro is a SAAS based helthcare application which is mainly used by hospitals, clinics and individual practitioners around the globe. Ehealth Pro Clinic is the clinic module of this SAAS application. The product is carefully thought and automated based on process and compliances used within the clinic for efficient execution of tasks and patient/employee/hospital management. There are multiple plans to choose from basic to advanced level of operations.</p>
+                      <h4>Features:</h4>
+                      <ul>
+                        <li> <span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                      </ul>
+
+                      <h4>Technologies used:</h4> <p> Ruby on Rails, JS/Jquery/AJAX, My SQL </p>
+                      <h4>Deployment:</h4>   <p>This is deployed on high availability and secured cloud servers and technologically advanced than its competitors in market. </p>
+                      <h4>Duration of the project:</h4><p> 8 months</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="p5">
+                  <div id="left-screen"><a href="/assets/screens/edupost.png" class="portfolio_IMageLink"> <img src="/assets/screens/edupost.png"  width="433" height="325"/></a>
+                  </div>
+                  <div id="right-screen">
+                    <h2>EDUPOST</h2>
+                    <div class="sample">
+                      <h4>Project Description:</h4> <p>Ehaeath pro is a SAAS based helthcare application which is mainly used by hospitals, clinics and individual practitioners around the globe. Ehealth Pro Clinic is the clinic module of this SAAS application. The product is carefully thought and automated based on process and compliances used within the clinic for efficient execution of tasks and patient/employee/hospital management. There are multiple plans to choose from basic to advanced level of operations.</p>
+                      <h4>Features:</h4>
+                      <ul>
+                        <li> <span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                      </ul>
+
+                      <h4>Technologies used:</h4> <p> Ruby on Rails, JS/Jquery/AJAX, My SQL </p>
+                      <h4>Deployment:</h4>   <p>This is deployed on high availability and secured cloud servers and technologically advanced than its competitors in market. </p>
+                      <h4>Duration of the project:</h4><p> 8 months</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="p6">
+                  <div id="left-screen"><a href="/assets/screens/studentstay.png" class="portfolio_IMageLink"> <img src="/assets/screens/studentstay.png"  width="433" height="325"/></a>
+                  </div>
+                  <div id="right-screen">
+                    <h2>Studentstay</h2>
+                    <div class="sample">
+                      <h4>Project Description:</h4> <p>Ehaeath pro is a SAAS based helthcare application which is mainly used by hospitals, clinics and individual practitioners around the globe. Ehealth Pro Clinic is the clinic module of this SAAS application. The product is carefully thought and automated based on process and compliances used within the clinic for efficient execution of tasks and patient/employee/hospital management. There are multiple plans to choose from basic to advanced level of operations.</p>
+                      <h4>Features:</h4>
+                      <ul>
+                        <li> <span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                      </ul>
+
+                      <h4>Technologies used:</h4> <p> Ruby on Rails, JS/Jquery/AJAX, My SQL </p>
+                      <h4>Deployment:</h4>   <p>This is deployed on high availability and secured cloud servers and technologically advanced than its competitors in market. </p>
+                      <h4>Duration of the project:</h4><p> 8 months</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="p7">
+                  <div id="left-screen"><a href="/assets/screens/Portfolio Items-618479-ImageUrl.jpg" class="portfolio_IMageLink"> <img src="/assets/screens/Portfolio Items-618479-ImageUrl.jpg"  width="433" height="325"/></a>
+                  </div>
+                  <div id="right-screen">
+                    <h2>Studentstay</h2>
+                    <div class="sample">
+                      <h4>Project Description:</h4> <p>Ehaeath pro is a SAAS based helthcare application which is mainly used by hospitals, clinics and individual practitioners around the globe. Ehealth Pro Clinic is the clinic module of this SAAS application. The product is carefully thought and automated based on process and compliances used within the clinic for efficient execution of tasks and patient/employee/hospital management. There are multiple plans to choose from basic to advanced level of operations.</p>
+                      <h4>Features:</h4>
+                      <ul>
+                        <li> <span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                      </ul>
+
+                      <h4>Technologies used:</h4> <p> Ruby on Rails, JS/Jquery/AJAX, My SQL </p>
+                      <h4>Deployment:</h4>   <p>This is deployed on high availability and secured cloud servers and technologically advanced than its competitors in market. </p>
+                      <h4>Duration of the project:</h4><p> 8 months</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="p8">
+                  <div id="left-screen"><a href="/assets/screens/Portfolio Items-1176844-ImageUrl.jpg" class="portfolio_IMageLink"> <img src="/assets/screens/Portfolio Items-1176844-ImageUrl.jpg"  width="433" height="325"/></a>
+                  </div>
+                  <div id="right-screen">
+                    <h2>Studentstay</h2>
+                    <div class="sample">
+                      <h4>Project Description:</h4> <p>Ehaeath pro is a SAAS based helthcare application which is mainly used by hospitals, clinics and individual practitioners around the globe. Ehealth Pro Clinic is the clinic module of this SAAS application. The product is carefully thought and automated based on process and compliances used within the clinic for efficient execution of tasks and patient/employee/hospital management. There are multiple plans to choose from basic to advanced level of operations.</p>
+                      <h4>Features:</h4>
+                      <ul>
+                        <li> <span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL </span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                        <li><span>Ruby on Rails, JS/Jquery/AJAX, My SQL</span>
+                        </li>
+                      </ul>
+
+                      <h4>Technologies used:</h4> <p> Ruby on Rails, JS/Jquery/AJAX, My SQL </p>
+                      <h4>Deployment:</h4>   <p>This is deployed on high availability and secured cloud servers and technologically advanced than its competitors in market. </p>
+                      <h4>Duration of the project:</h4><p> 8 months</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-holder" style="width: 1123px;">
+            <div id="portfolia_lower">
+              <div id="our_work">
+                <div id="slideshow-carousel">
+                  <ul id="carousel" class="jcarousel-skin-tango">
+                    <li><a href="#" rel="p1"><img src="/assets/screens/smartquotez.png" alt="SmartQuotez" title="SmartQuotez" width="208" height="153" /></a></li>
+                    <li><a href="#" rel="p2"><img src="/assets/screens/mdih.png" alt="Mydateishere" title="Mydateishere" width="208" height="153" /></a></li>
+                    <li><a href="#" rel="p3"><img src="/assets/screens/mdih2.png" alt="MDIH" title="MDIH" width="208" height="153" /></a></li>
+                    <li><a href="#" rel="p4"><img src="/assets/screens/timeraven1.png" alt="Timeraven" title="Timeraven" width="208" height="153" /></a></li>
+                    <li><a href="#" rel="p5"><img src="/assets/screens/edupost.png" alt="Edupost" title="Edupost" width="208" height="153" /></a></li>
+                    <li><a href="#" rel="p6"><img src="/assets/screens/studentstay.png" alt="Studentstay" title="Studentstay" width="208" height="153"  /></a></li>
+                    <li><a href="#" rel="p7"><img src="/assets/screens/Portfolio Items-618479-ImageUrl.jpg" alt="Studentstay" title="Studentstay" width="208" height="153"  /></a></li>
+                    <li><a href="#" rel="p8"><img src="/assets/screens/Portfolio Items-1176844-ImageUrl.jpg" alt="Studentstay" title="Studentstay" width="208" height="153"  /></a></li>
+                    <!--<li><a href="#" rel="p11"><img src="Portfolio_/assets/gnax.jpg" alt="gnax" title="Gnax" height="62px" width="103px" /></a></li>-->
+                  </ul>
+                </div>
+              </div>
+              <div id="what_our_clients">
+                <div id="left_side">
+                  <table width="100%" cellpadding="5px;" cellspacing="5px;" style=" padding-left: 2px;    padding-top: 30px;    text-align: center;">
+                    <tr>
+                      <td style="font-size: 24px;color: black;font-family: Georgia;font-style: italic;">Prashant Shah</td>
+                    </tr>
+                    <tr><td></td></tr>
+                    <tr>
+                      <td style="font-size: 14px;color: black;font-family: 'Lucida Grande';"> Co-Founder: <span style="font-size: 14px;">SMART QUOTEZ</span></td>
+                    </tr>
+                    <tr>
+                      <td>  <ul id="star">
+                          <li><img src="/assets/star icon.png"/></li>
+                          <li><img src="/assets/star icon.png"/></li>
+                          <li><img src="/assets/star icon.png"/></li>
+                          <li><img src="/assets/star icon.png"/></li>
+                          <li><img src="/assets/star icon.png"/></li>
+                        </ul> </td>
+                    </tr>
+                  </table>
+                </div>
+                <div id="right_side">
+                  <span class="bqstart"><img src="/assets/portfolio/colon.png"/></span>
+                  <span class="testimonialTextSpan">Dine Medis and its team produced stellar results for me, on budget, on time and were very easy to work with in spite of my being across the globe..</span>
+                  <span class="bqend"><img src="/assets/portfolio/colon1.png"/></span>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: center; margin-bottom: 55px;">
+              <img src="/assets/portfolio/request a quote button.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <footer id="footer">
+        <div class="footer-holder">
+          <div class="footer-frame">
+            <div class="col-1">
+              <p>@ Copyright Dine-Media All Rights Reserved.</p>
+            </div>
+            <div class="col-2">
+              <ul class="footer-links">
+                <li><a href="#"> Home </a></li>
+                <li>|</li>
+                <li><a href="#"> Portfolio </a></li>
+                <li>|</li>
+                <li><a href="#"> Services </a></li>
+                <li>|</li>
+                <li><a href="#"> Contact Us </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+
+        //jCarousel Plugin
+        $('#carousel').jcarousel({
+          vertical: false,
+          scroll: 5,
+          auto: 0,
+          wrap: 'last',
+          initCallback: mycarousel_initCallback
+
+        });
+        //Combine jCarousel with Image Display
+        $('div#slideshow-carousel li a').hover(
+      ).click(function () {
+          $('span.arrow').remove();
+          $('div#portfolia_screen li').removeClass('active');
+          $('div#portfolia_screen li.' + $(this).attr('rel')).addClass('active').fadeIn("slow");
+
+          return false;
+        });
+      });
+      //Carousel Tweaking
+      function mycarousel_initCallback(carousel) {
+        // Pause autoscrolling if the user moves with the cursor over the clip.
+        carousel.clip.hover(function() {
+          carousel.stopAuto();
+        }, function() {
+          carousel.startAuto();
+        });
+      }
+
+      jQuery("a.portfolio_IMageLink").fancybox({
+        'titleShow'		: false,
+        'transitionIn'	: 'elastic',
+        'transitionOut'	: 'elastic'
+      });
+    </script>
+  </body>
+</html>
