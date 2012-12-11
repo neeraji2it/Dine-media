@@ -9,14 +9,12 @@ set :scm, 'git'
 set :repository,  "git@github.com:neeraji2it/Dine-media.git"
 set :git_enable_submodules, 1 # if you have vendored rails
 set :branch, 'master'
-set :scm_passphrase, "shareef"  # The deploy user's password
+#set :scm_passphrase, "shareef"  # The deploy user's password
 default_run_options[:pty] = true  # Must be set for the password prompt from git to work
 #set :repository_cache, "git_cache"
 set :git_shallow_clone, 1
 set :scm_verbose, true
-set :default_environment, {
-  'LANG' => 'en_US.UTF-8'
-}
+
 # roles (servers)
 role :web, domain
 role :app, domain
