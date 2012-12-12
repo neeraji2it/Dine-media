@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <td><%= @contact.name %></td>
+  </tr>
+  <tr>
+    <td><%= @contact.email %></td>
+  </tr>
+  <tr>
+    <td><%= @contact.subject %></td>
+  </tr>
+  <tr>
+    <td><%= @contact.body %></td>
+  </tr>
+   <tr>
+    <td><%#= image_tag attachments['photo.png'].url -%><%= link_to image_tag(@contact.attach.url(:thumb)),  "http://localhost:3000#{@contact.attach.url(:original)}" %></td>
+  </tr>
+</table>

@@ -4,8 +4,22 @@
     <meta charset="utf-8">
       <title>Contact</title>
     </meta>
-    <%= stylesheet_link_tag "all", :media => "all" %>
-
+    <%= stylesheet_link_tag "all", "jquery.notifyBar", :media => "all" %>
+        <%= javascript_include_tag "application", "fancybox/jquery-1.4.2.min.js","fancybox/jquery.mousewheel-3.0.2.pack.js", "fancybox/jquery.fancybox-1.3.1.js", "jquery.jcarousel.pack.js", "jquery.uscrollbar.js", "jquery.notifyBar.js" %>
+    <%['notice', 'error', 'warning'].each do |f|%>
+      <%if flash[f.to_sym]%>
+        <script type="text/javascript" >
+          jQuery(function () {
+            jQuery.notifyBar({
+              cls: "<%= f %>",
+              html: "<%=  flash[f.to_sym] %>",
+              delay: 10000,
+              animationSpeed: "normal"
+            });
+          });
+        </script>
+      <%end%>
+    <% end %>
   </head>
   <body class="home">
     <!-- wrapper -->
@@ -23,7 +37,7 @@
                 <ul class="social-networks">
                   <li><%=  link_to image_tag("/assets/homeblack.png"), '/', :class=>"home1" %></li>
                   <li><%=   link_to image_tag("/assets/portfolioblack.png"), '/portfolio', :class=>"portfolio"  %></li>
-                  <li><%=  link_to image_tag("/assets/homeorange.png"), '/contact'  %></li>
+                  <li><%=  link_to image_tag("/assets/contactorange.png"), '/contact'  %></li>
                 </ul>
               </div>
             </div>
@@ -97,54 +111,54 @@
 
                         </style>
                         <div id='crmWebToEntityForm' align=left>
-                          <meta http-equiv ='content-type' content='text/html;charset = UTF-8' />
-                          <form action='https://crm.zoho.com/crm/WebToLeadForm' name=WebToLeads531571000000103019 method='POST' onsubmit='javascript:document.charset="UTF-8"; return checkMandatery()' accept-charset='UTF-8'>
-                            <table border=0 cellspacing=0 cellpadding=5 width=550>
+                          <%= form_for(@contact, :url=>contact_path, :method => 'post', :html => { :multipart => true }) do |f| %>
+                            <table border=0 cellspacing=0 cellpadding=3 width=550>
                               <tr>
                                 <td nowrap style='font-family:sans-serif;font-size:14px;' align='left' width='25%'>Your Name <span style="color:red;font-size:16px;">*</span> &nbsp;&nbsp;:</td>
                               </tr>
                               <tr>
                                 <td width='45%'>
-                                  <input type='text' maxlength='40' name='First Name' />
+                                  <%= f.text_field :name %>
                                 </td>
+                              </tr>
+                              <tr>
+                                <td><%= validation_error(@contact.errors["name"])%></td>
                               </tr>
                               <tr>
                                 <td nowrap style='font-family:sans-serif;font-size:14px;' align='left' width='25%'>Your Email <span style="color:red;font-size:16px;">*</span> &nbsp;&nbsp;:</td>
                               </tr>
                               <tr>
                                 <td width='45%'>
-                                  <input type='text' maxlength='100' name='Email' />
+                                  <%= f.text_field :email %>
                                 </td>
+                              </tr>
+                              <tr>
+                                <td><%= validation_error(@contact.errors["email"])%></td>
                               </tr>
                               <tr>
                                 <td nowrap style='font-family:sans-serif;font-size:14px;' align='left' width='25%'>Subject &nbsp;&nbsp;:</td>
                               </tr>
                               <tr>
                                 <td width='45%'>
-                                  <input type='text' maxlength='30' name='Phone' />
+                                  <%= f.text_field :subject %>
                                 </td>
                               </tr>
                               <tr>
                                 <td nowrap style='font-family:sans-serif;font-size:14px;' align='left' width='25%'>Your Message &nbsp;&nbsp;:</td>
                               </tr>
                               <tr>
-                                <td width='45%'><textarea class="text_area_con" name='LEADCF2' maxlength='1000' width='250' height='250' ></textarea></td>
+                                <td width='45%'>
+                                  <%= f.text_area :body, :maxlength=>'1000', :width=>'250', :height=>'250' %>
+                                </td>
                               </tr>
-                              <!--                                                            <tr>
-                                                                                              <td nowrap style='font-family:sans-serif;font-size:12px;' align='left' width='25%' colspan="2">
-				Security  <span style="color:red;font-size:16px;">*</span> :
-                                                                                                  <span style="border:1px solid #cccccc;padding:3px 0px 3px 3px; " >
-                                                                                                      <input type="text" readonly="readonly" class="securityInp" value="1" />
-				+
-                                                                                                      <input type="text" readonly="readonly"  class="securityInp" value="9" />
-                                                                                                  </span>
-				=
-                                                                                                  <span style="border:1px solid #cccccc;padding:3px;" >
-                                                                                                      <input type="text" name="summath"  class="securityInansp" value="" />
-                                                                                                  </span>
-
-                                                                                              </td>
-                                                                                          </tr>-->
+                              <tr>
+                                <td nowrap style='font-family:sans-serif;font-size:14px;' align='left' width='25%'>Upload a file &nbsp;&nbsp;:</td>
+                              </tr>
+                              <tr>
+                                <td width='45%'>
+                                  <%= f.file_field :attach %>
+                                </td>
+                              </tr>
                               <tr>
                                 <td colspan=2 align=left>
                                   <input style="margin-left: 161px;" type='submit' name='save' value="Send" />
@@ -153,41 +167,7 @@
                                 </td>
                               </tr>
                             </table>
-                            <script>
-                              var randomSum = 10
-                              var mndFileds = new Array('First Name', 'Email' );
-                              var fldLangVal = new Array('First Name', 'Email');
-                              function checkMandatery() {
-                                for ( i = 0; i < mndFileds.length; i++) {
-                                  var fieldObj = document.forms['WebToLeads531571000000103019'][mndFileds[i]];
-                                  var fieldObjmath = document.forms['WebToLeads531571000000103019'][mndFileds[3]];
-                                  if ((fieldObj) && ((fieldObj.value).replace(/^\s+|\s+$/g, '')).length == 0) {
-                                    alert(fldLangVal[i] + ' cannot be empty');
-                                    fieldObj.focus();
-                                    return false;
-                                  } else if (fieldObj && (fieldObj.nodeName == 'SELECT') && (fieldObj.options[fieldObj.selectedIndex].value == '-None-')) {
-                                    alert(fldLangVal[i] + ' cannot be none');
-                                    fieldObj.focus();
-                                    return false;
-                                  }
-                                  else if(fieldObjmath.value != 0)
-                                  {
-                                    if(fieldObjmath.value == randomSum)
-                                    {
-                                      return true
-                                    }
-                                    else
-                                    {
-                                      alert("Enter the correct answer");
-                                      fieldObjmath.focus();
-                                      return false;
-                                    }
-                                  }
-
-                                }
-                              }
-                            </script>
-                          </form>
+                          <% end %>
                         </div>
                       </p>
                     </td>
