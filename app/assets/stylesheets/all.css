@@ -50,7 +50,7 @@ header, footer, article, section, hgroup, nav, figure, aside{display:block;}
 }
 /* logo */
 .logo{
-    margin: 12px 0 0 -32px;
+    margin: 12px 0 0 -28px;
     float:left;
     background:url(/assets/logo.png) no-repeat;
     text-indent:-9999px;
