@@ -5,7 +5,7 @@ DineMedia::Application.routes.draw do
   match 'mobile_appications'=> "home#mobile_appications"
   match 'portfolio'=> "home#portfolio"
   match 'contact'=> "home#contact"
-  resources :home 
+  resources :home
   root :to => "home#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.

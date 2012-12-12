@@ -65,7 +65,7 @@ header, footer, article, section, hgroup, nav, figure, aside{display:block;}
 
 /* social networks */
 .social-networks{
-     margin: -1px 0 0;
+    margin: -1px 0 0;
     padding:0;
     list-style:none;
     float:right;
@@ -159,7 +159,7 @@ header, footer, article, section, hgroup, nav, figure, aside{display:block;}
 
 
 .sub-nav-buttons li{
-     margin: 0 77px 0 17px;
+    margin: 0 77px 0 17px;
     float:left;
 }
 .sub-nav-buttons a{
@@ -177,7 +177,7 @@ header, footer, article, section, hgroup, nav, figure, aside{display:block;}
     width:100%;
     overflow:hidden;
     background:url(/assets/home/lates2_02.jpg) no-repeat 50% 0;
-     margin-bottom: -111px;
+    margin-bottom: -111px;
 }
 
 #ads{
@@ -562,7 +562,7 @@ header, footer, article, section, hgroup, nav, figure, aside{display:block;}
     margin:0 auto;
     /*    padding:17px 0 0;*/
     background:none;
-      background: url("/assets/home/sroll bar.png") no-repeat scroll 0 center transparent;
+    background: url("/assets/home/sroll bar.png") no-repeat scroll 0 center transparent;
 }
 
 .home .sub_main-holder{
@@ -633,7 +633,7 @@ header, footer, article, section, hgroup, nav, figure, aside{display:block;}
     line-height:24px;
     height: 39px;
     color:#c2c2c2;
-     margin-top: 9px;
+    margin-top: 9px;
     background:url(/assets/home/footer_03.jpg) no-repeat 50% 0;
 }
 
@@ -822,7 +822,7 @@ header, footer, article, section, hgroup, nav, figure, aside{display:block;}
 }
 #what_our_clients{
     margin: 0 auto;
-   padding: 250px 28px 0 60px;
+    padding: 250px 28px 0 60px;
     width: 935px;
 }
 #what_our_clients #left_side{
@@ -831,14 +831,14 @@ header, footer, article, section, hgroup, nav, figure, aside{display:block;}
 }
 #what_our_clients #right_side{
     float: left;
-     background:url(/assets/portfolio/testimonialbox.png) no-repeat;
+    background:url(/assets/portfolio/testimonialbox.png) no-repeat;
     width: 646px;
     height: 216px;
 }
 
 #what_our_clients .bqstart{
     float: left;
-     margin-left: 40px;
+    margin-left: 40px;
     margin-top: 30px;
 }
 
@@ -850,7 +850,7 @@ header, footer, article, section, hgroup, nav, figure, aside{display:block;}
 }
 
 .testimonialTextSpan {
-   color: black;
+    color: black;
     float: left;
     font: italic 18px 'Comic Sans MS';
     margin-left: 8px;
@@ -867,5 +867,5 @@ header, footer, article, section, hgroup, nav, figure, aside{display:block;}
 }
 .form_error{
     color: red;
-     margin-top: -5px;
+    margin-top: -5px;
 }

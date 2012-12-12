@@ -1,4 +1,3 @@
-
 class HomeController < ApplicationController
   
   def index
@@ -22,7 +21,5 @@ class HomeController < ApplicationController
       render :layout => false
     end
   end
-
-
-
+  
 end
